@@ -27,7 +27,8 @@ the restaurant.
 - add react router, to food description/summary etc etc
 - style it better in the end
 - New page with menu boxes on click show description add some filters like:
-    - drinks,dinner and subfilters like vege etc 
+    - drinks,dinner and subfilters like vege etc
+    - add filters to data/db.json && add price 
 
 
 
