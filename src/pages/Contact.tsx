@@ -1,11 +1,10 @@
 import React from "react";
-import "./../App.css";
 
 function Contact() {
 
 
     return (
-        <div className="App">
+        <div className="contact">
             <h1>Restaurant Contact</h1>
         </div>
     );

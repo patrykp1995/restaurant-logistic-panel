@@ -1,0 +1,36 @@
+@import "../../assets/variables";
+
+
+.menuContainer {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  max-width: $desktop;
+
+  &__element {
+    cursor: pointer;
+    border: 3px solid $secondary-color;
+    color: $primary-color;
+    margin: 5px;
+    padding: 10px;
+    font-weight: 600;
+    border-radius: .4rem;
+
+    img {
+      border-radius: .4rem;
+    }
+
+    &:hover {
+      opacity: .5;
+    }
+
+    &--description {
+      margin-top: 2rem;
+      border-top: 3px solid $primary-color;
+
+      .descriptionName {
+        margin-top: 2rem;
+      }
+    }
+  }
+}

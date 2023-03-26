@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import "./../App.css";
+import '../assets/app.scss';
 import {useSelector, useDispatch} from "react-redux";
 import {addReservation} from "../feature/reservationsSlice";
 // @ts-ignore
@@ -27,10 +27,10 @@ function Layout() {
     };
 
     return (
-        <div className="App">
+        <div className="container">
 
             <h1>Restaurant Logistic System</h1>
-            <div className="container">
+            <div className="containerBox">
                 <div className="reservation-container">
                     <div>
                         <h5 className="reservation-header">Reservations</h5>
@@ -44,14 +44,16 @@ function Layout() {
                         </div>
                     </div>
                     <div className="reservation-input-container">
-                        <input
-                            value={reservationNameInput}
-                            placeholder="Surname..."
-                            onChange={(e) => {
-                                setReservationNameInput(e.target.value);
-                            }}
-                        />
-                        <button onClick={handleAddReservations}>Add</button>
+                        <div className="reservation-input-container__addClient">
+                            <input
+                                value={reservationNameInput}
+                                placeholder="Surname..."
+                                onChange={(e) => {
+                                    setReservationNameInput(e.target.value);
+                                }}
+                            />
+                            <button onClick={handleAddReservations}>Add</button>
+                        </div>
                         <p>{reservationNameError}</p>
                     </div>
                 </div>

@@ -1,7 +1,5 @@
 import React from "react";
-import "./App.css";
 
-import MenuItems from "./components/Menu/MenuItems";
 import Navbar from "./components/Navbar/Navbar";
 import {Routes, Route} from "react-router-dom";
 import Layout from "./pages/Layout";

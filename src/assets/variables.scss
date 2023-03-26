@@ -1,0 +1,29 @@
+$primary-color: #24377B;
+$secondary-color: #f4b806;
+
+
+$mobile: 320px;
+$large-mobile: 568px;
+$tablet: 768px;
+$large-tablet: 1024px;
+$laptop: 1366px;
+$desktop: 1680px;
+
+$default-radius: 0.4rem;
+
+
+button {
+  background-color: $primary-color;
+  cursor: pointer;
+  margin: 0;
+  padding: 10px;
+  border: none;
+  font-weight: 600;
+  color: white;
+
+  &:hover {
+    background: $secondary-color;
+    color: $primary-color;
+    transition: .4s;
+  }
+}

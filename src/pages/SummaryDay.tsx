@@ -1,11 +1,10 @@
 import React from "react";
-import "./../App.css";
 
 function SummaryDay() {
 
 
     return (
-        <div className="App">
+        <div className="summary">
             <h1>Summary Restaurant</h1>
         </div>
     );

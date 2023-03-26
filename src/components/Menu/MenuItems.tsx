@@ -1,7 +1,5 @@
 import React from "react";
-import {Swiper, SwiperSlide} from "swiper/react";
-
-import "swiper/css";
+import './MenuItems.scss'
 import {useGetMenuQuery} from "../../feature/api/apiSlice";
 
 const MenuItems = () => {
@@ -18,23 +16,19 @@ const MenuItems = () => {
         content = <p>Loading...</p>;
     } else if (isSuccess) {
         content = (
-            <Swiper
-                spaceBetween={50}
-                slidesPerView={3}
-                // onSlideChange={() => console.log("slide change")}
-                // onSwiper={(swiper) => console.log(swiper)}
-            >
+            <div className="menuContainer">
                 {menu.map((contentItem) => {
                     return (
-                        <SwiperSlide key={contentItem.id}>
-                            <div className="menuElement">
-                                <img src={contentItem.img}/>
-                                <p>{contentItem.name}</p>
+                        <div className="menuContainer__element" key={contentItem.id}>
+                            <img src={contentItem.img} alt={contentItem.name} width="300" height={200}/>
+                            <div className="menuContainer__element--description">
+                                <p className="descriptionName">{contentItem.name}</p>
+                                <span>price:<p>{contentItem.price}</p></span>
                             </div>
-                        </SwiperSlide>
+                        </div>
                     );
                 })}
-            </Swiper>
+            </div>
         );
     } else if (isError) {
         content = <p>{error}</p>;
