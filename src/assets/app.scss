@@ -141,6 +141,17 @@
 
 .customer-food-input-container {
   display: flex;
+
+  select {
+    border: 3px solid $secondary-color;
+    border-right: none;
+    color: $primary-color;
+    font-weight: 600;
+
+    &:focus-visible {
+      outline: none;
+    }
+  }
 }
 
 .customer-food-input-container input {
