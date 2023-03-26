@@ -23,7 +23,7 @@ const MenuItems = () => {
                             <img src={contentItem.img} alt={contentItem.name} width="300" height={200}/>
                             <div className="menuContainer__element--description">
                                 <p className="descriptionName">{contentItem.name}</p>
-                                <span>price:<p>{contentItem.price}</p></span>
+                                <span>price:<p>{contentItem.price}$$</p></span>
                             </div>
                         </div>
                     );
