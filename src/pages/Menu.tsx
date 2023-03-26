@@ -6,7 +6,7 @@ function Menu() {
 
     return (
         <div className="menu">
-            <h1>Restaurant Contact</h1>
+            <h1>Restaurant Menu</h1>
             <MenuItems/>
         </div>
     );
