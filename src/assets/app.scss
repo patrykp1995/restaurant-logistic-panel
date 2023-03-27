@@ -12,6 +12,13 @@
   height: 100vh;
 }
 
+.container {
+  border: 3px solid $secondary-color;
+  border-radius: .4rem;
+  margin: 3rem;
+  padding: 1rem;
+}
+
 .App h1 {
   display: flex;
   align-content: center;
@@ -39,6 +46,8 @@
 
 .reservation-cards-container {
   min-height: 35rem;
+  max-height: 35rem;
+  overflow: scroll;
 
   h4 {
     color: $primary-color;
@@ -105,6 +114,8 @@
   width: 80%;
   display: flex;
   flex-direction: column;
+  max-height: 40rem;
+  overflow: scroll;
 }
 
 .customer-food {

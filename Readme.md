@@ -17,7 +17,6 @@ the restaurant.
 # Next features?
 
 - add object with list of food and price ( maybe from db.json with rtk query?s)
-- galery menu ready -> remove this new idea on the bottom
 - fetch and chose in every table food
 - add summary in every table
 - if table is close, add check to total summary
@@ -26,6 +25,7 @@ the restaurant.
 - adding new food to menu
 - add react router, to food description/summary etc etc
 - style it better in the end
+- if someone order same food then add all items in same order and ad x example 'item 3x'
 - New page with menu boxes on click show description add some filters like:
     - drinks,dinner and subfilters like vege etc
     - add filters to data/db.json && add price 
