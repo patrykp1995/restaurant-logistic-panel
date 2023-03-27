@@ -33,10 +33,6 @@ function CustomerCard({id, name, food, index}: CustomerCardType) {
                     >
                         <MenuInTable/>
                     </select>
-                    {/*<input*/}
-                    {/*  value={customerFoodInput}*/}
-                    {/*  onChange={(e) => setCustomerFoodInput(e.target.value)}*/}
-                    {/*/>*/}
                     <button
                         onClick={() => {
                             dispatch(
@@ -53,7 +49,7 @@ function CustomerCard({id, name, food, index}: CustomerCardType) {
             </div>
             <div className="customer-food">
                 {food.map((food) => {
-                    return <p>{food}</p>;
+                    return <p key={food}>{food}</p>;
                 })}
             </div>
         </div>

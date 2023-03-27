@@ -28,7 +28,7 @@
       "name": "Sok pomarańczowy",
       "category": "drinks",
       "price": 1.99,
-      "id": 3,
+      "id": 4,
       "description": "250ml świeżo wyciskanego soku z pomarańczy",
       "img": "https://zasoby.ekologia.pl/artykulyNew/26278/xxl/shutterstock-519342568_800x600.jpg"
     },
@@ -36,7 +36,7 @@
       "name": "Coca Cola",
       "category": "drinks",
       "price": 1.49,
-      "id": 3,
+      "id": 5,
       "description": "250ml zimnej coca coli",
       "img": "https://www.pagenews.gr/wp-content/uploads/2022/09/EeVj4ZPWoAAaXaO-1024x630.jpg"
     },
@@ -44,7 +44,7 @@
       "name": "Whisky z Coca Colą",
       "category": "alcohols",
       "price": 5.49,
-      "id": 3,
+      "id": 6,
       "description": "80ml whisky Talisker z lodem i zimną Coca Colą",
       "img": "https://jakpicwhisky.pl/wp-content/uploads/2021/11/signature_mixers_woody-1.jpg"
     },
@@ -52,7 +52,7 @@
       "name": "Pasta Aglio Olio with Shrimps",
       "category": "dinner",
       "price": 14.99,
-      "id": 4,
+      "id": 7,
       "description": "Włoski makaron z oliwą, czosnkiem, papryczką chilli, natką pietruszki, masłem i krewetkami.",
       "img": "https://c6.staticflickr.com/9/8346/28111939213_fc18b29d8f_o.jpg"
     }

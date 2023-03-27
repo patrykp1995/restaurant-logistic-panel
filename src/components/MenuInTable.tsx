@@ -1,6 +1,5 @@
 import React from "react";
 import {useGetMenuQuery} from "../feature/api/apiSlice";
-import {Swiper, SwiperSlide} from "swiper/react/swiper-react";
 
 const MenuInTable = () => {
     const {
@@ -13,7 +12,7 @@ const MenuInTable = () => {
 
     let data;
     if (isLoading) {
-        data = <p>Loading...</p>;
+        data = 'Loading...';
     } else if (isSuccess) {
         data = menu.map((el) => {
             return (
@@ -23,7 +22,7 @@ const MenuInTable = () => {
             );
         });
     } else if (isError) {
-        data = <p>{error}</p>;
+        data = "Something went wrong";
     }
 
     return <>{data}</>;
