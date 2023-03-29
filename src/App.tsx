@@ -6,6 +6,7 @@ import Layout from "./pages/Layout";
 import Contact from "./pages/Contact";
 import SummaryDay from "./pages/SummaryDay";
 import Menu from "./pages/Menu";
+import SummaryOfSingleTable from "./pages/SummaryOfSingleTable";
 
 function App() {
 
@@ -18,6 +19,7 @@ function App() {
                 <Route path="/menu" element={<Menu/>}/>
                 <Route path="/contact" element={<Contact/>}/>
                 <Route path="/summary" element={<SummaryDay/>}/>
+                <Route path="/:slug" element={<SummaryOfSingleTable/>}/>
             </Routes>
         </div>
     );

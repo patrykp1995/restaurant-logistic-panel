@@ -3,10 +3,10 @@
 .navbar {
   height: 5.6rem;
   border-bottom: 3px solid $secondary-color;
-  box-shadow: -2px -1px 23px 6px $primary-color;
   width: 100%;
   display: flex;
   justify-content: center;
+  background: #24377b70;
 
   .navbar-container {
     display: flex;

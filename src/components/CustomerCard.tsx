@@ -2,6 +2,7 @@ import React, {useState} from "react";
 import {useDispatch} from "react-redux";
 import {addFoodToCustomer, removeCustomer} from "../feature/customerSlice";
 import MenuInTable from "./MenuInTable";
+import {Link} from "react-router-dom";
 
 interface CustomerCardType {
     id: string;
@@ -24,6 +25,11 @@ function CustomerCard({id, name, food, index}: CustomerCardType) {
                 >
                     Remove Customer
                 </button>
+                <Link to="/summarySingle">
+                    <button>
+                        Summary of the table
+                    </button>
+                </Link>
             </div>
             <div className="customer-foods-container">
                 <div className="customer-food-input-container">

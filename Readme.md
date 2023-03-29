@@ -20,15 +20,22 @@ the restaurant.
 - fetch and chose in every table food
 - add summary in every table
 - if table is close, add check to total summary
+- on click in menu element show new page with details
 - add img of food? **_<strong>DONE</strong>_**
 - add guest cunter in reservation and next add how price per person money/people spend -> summary of day
 - adding new food to menu
+- add form in contact
 - add react router, to food description/summary etc etc
 - style it better in the end **_<strong>DONE</strong>_**
 - if someone order same food then add all items in same order and ad x example 'item 3x'
 - New page with menu boxes on click show description add some filters like:
     - drinks,dinner and subfilters like vege etc
     - add filters to data/db.json && add price  **_<strong>DONE</strong>_**
+
+# Information for me
+
+- add new disptach for addReservation with number of people ( change type for reservation to object and inside add name
+  and number)
 
 
 
