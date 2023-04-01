@@ -3,11 +3,12 @@ import {createSlice, PayloadAction} from "@reduxjs/toolkit";
 interface Customer {
     id: string;
     name: string;
-    food: string[];
+    food: AddFoodToCustomerPayload[];
     count: number;
 }
 
-interface AddFoodToCustomerPayload {
+
+export interface AddFoodToCustomerPayload {
     food: string;
     id: string;
     price: number;
@@ -37,7 +38,9 @@ export const customerSlice = createSlice({
         ) => {
             state.value.forEach((customer) => {
                 if (customer.id === action.payload.id) {
-                    customer.food.push(action.payload.food);
+                    console.log('actionPal', action.payload)
+                    customer.food.push(action.payload);
+                    console.log('customerFood', customer.food)
                 }
             });
         },

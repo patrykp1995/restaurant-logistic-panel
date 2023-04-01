@@ -57,6 +57,7 @@ function Layout() {
                             />
                             <input placeholder="Reserervation Count"
                                    type="number"
+                                   min="1"
                                    value={reservationCountInput}
                                    onChange={e => setReservationCountInput(parseInt(e.target.value))}
                             />

@@ -16,14 +16,14 @@ the restaurant.
 
 # Next features?
 
-- add object with list of food and price ( maybe from db.json with rtk query?s)
-- fetch and chose in every table food
+- add object with list of food and price ( maybe from db.json with rtk query?s) **_<strong>DONE</strong>_**
+- fetch and chose in every table food **_<strong>DONE</strong>_**
 - add summary in every table
 - if table is close, add check to total summary
 - on click in menu element show new page with details
 - add img of food? **_<strong>DONE</strong>_**
 - add guest cunter in reservation and next add how price per person money/people spend -> summary of day
-- adding new food to menu
+- adding new food to menu ( form with name,price,description,img)
 - add form in contact
 - add react router, to food description/summary etc etc
 - style it better in the end **_<strong>DONE</strong>_**

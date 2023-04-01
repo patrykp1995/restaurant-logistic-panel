@@ -135,6 +135,26 @@
 .customer-food {
   display: flex;
   flex-direction: column;
+
+  &--order {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    background: $primary-color;
+    color: $secondary-color;
+    padding: 5px 15px;
+    border-radius: 0.4rem;
+    margin: 5px 0;
+
+    h5 {
+      color: $secondary-color !important;
+    }
+
+    span {
+      display: flex;
+      align-items: center;
+    }
+  }
 }
 
 .customer-food-container p {

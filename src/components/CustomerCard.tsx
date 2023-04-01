@@ -1,13 +1,13 @@
 import React, {useState} from "react";
 import {useDispatch} from "react-redux";
-import {addFoodToCustomer, removeCustomer} from "../feature/customerSlice";
+import {addFoodToCustomer, AddFoodToCustomerPayload, removeCustomer} from "../feature/customerSlice";
 import MenuInTable from "./MenuInTable";
 import {Link} from "react-router-dom";
 
 interface CustomerCardType {
     id: string;
     name: string;
-    food: string[];
+    food: AddFoodToCustomerPayload[];
     index: number;
     count: number;
 }
@@ -67,7 +67,12 @@ function CustomerCard({id, name, food, index, count}: CustomerCardType) {
             </div>
             <div className="customer-food">
                 {food.map((food) => {
-                    return <p>{food}</p>;
+                    return (
+                        <div className="customer-food--order">
+                            <h5>{food.food}</h5>
+                            <span>{food.price} $$</span>
+                        </div>
+                    )
                 })}
             </div>
         </div>
