@@ -9,15 +9,20 @@ interface CustomerCardType {
     name: string;
     food: string[];
     index: number;
+    count: number;
 }
 
-function CustomerCard({id, name, food, index}: CustomerCardType) {
+function CustomerCard({id, name, food, index, count}: CustomerCardType) {
     const [customerFoodInput, setCustomerFoodInput] = useState("");
+    const [foodPrice, setFoodPrice] = useState(0)
     const dispatch = useDispatch();
+
+    console.log('foodList', food)
     return (
         <div className="customer-food-card-container">
             <div className="customer-food-card-container__client-info">
                 <h5>{name}</h5>
+                <p>Ilość osób: {count}</p>
                 <button
                     onClick={() => {
                         dispatch(removeCustomer(index));
@@ -34,8 +39,14 @@ function CustomerCard({id, name, food, index}: CustomerCardType) {
             <div className="customer-foods-container">
                 <div className="customer-food-input-container">
                     <select
+                        id="customerSelect"
                         value={customerFoodInput}
-                        onChange={(e) => setCustomerFoodInput(e.target.value)}
+                        onChange={(e) => {
+                            setCustomerFoodInput(e.target.value);
+                            setFoodPrice(e.target.options[e.target.selectedIndex].dataset.price);
+                            console.log(foodPrice)
+                        }
+                        }
                     >
                         <MenuInTable/>
                     </select>
@@ -44,6 +55,7 @@ function CustomerCard({id, name, food, index}: CustomerCardType) {
                             dispatch(
                                 addFoodToCustomer({
                                     id,
+                                    price: foodPrice,
                                     food: customerFoodInput,
                                 })
                             );
@@ -55,7 +67,7 @@ function CustomerCard({id, name, food, index}: CustomerCardType) {
             </div>
             <div className="customer-food">
                 {food.map((food) => {
-                    return <p key={food}>{food}</p>;
+                    return <p>{food}</p>;
                 })}
             </div>
         </div>

@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useState, useRef} from "react";
 import '../assets/app.scss';
 import {useSelector, useDispatch} from "react-redux";
 import {addReservation} from "../feature/reservationsSlice";
@@ -9,8 +9,8 @@ import CustomerCard from "../components/CustomerCard";
 
 function Layout() {
     const dispatch = useDispatch();
-
     const [reservationNameInput, setReservationNameInput] = useState("");
+    const [reservationCountInput, setReservationCountInput] = useState(1)
     const [reservationNameError, setReservationNameError] = useState("");
     const reservations = useSelector(
         (state: RootState) => state.reservations.value
@@ -21,11 +21,13 @@ function Layout() {
             setReservationNameError("Podaj nazwisko osoby rezerwującej");
             return;
         }
-        dispatch(addReservation(reservationNameInput));
+        dispatch(addReservation({
+            name: reservationNameInput,
+            count: reservationCountInput
+        }));
         setReservationNameInput("");
         setReservationNameError("");
     };
-
     return (
         <div className="container">
 
@@ -36,9 +38,10 @@ function Layout() {
                         <h5 className="reservation-header">Reservations</h5>
                         <div className="reservation-cards-container">
                             {!reservations.length && <h4>List is Empty</h4>}
-                            {reservations.map((name, index) => {
+                            {reservations.map((reservation, index) => {
                                 return (
-                                    <ReservationCard name={name} key={index} index={index}/>
+                                    <ReservationCard name={reservation.name} count={reservation.count} key={index}
+                                                     index={index}/>
                                 );
                             })}
                         </div>
@@ -52,9 +55,14 @@ function Layout() {
                                     setReservationNameInput(e.target.value);
                                 }}
                             />
+                            <input placeholder="Reserervation Count"
+                                   type="number"
+                                   value={reservationCountInput}
+                                   onChange={e => setReservationCountInput(parseInt(e.target.value))}
+                            />
                             <button onClick={handleAddReservations}>Add</button>
                         </div>
-                        <p>{reservationNameError}</p>
+                        <p className="error">{reservationNameError}</p>
                     </div>
                 </div>
                 <div className="customer-food-container">
@@ -66,6 +74,7 @@ function Layout() {
                                 name={customer.name}
                                 food={customer.food}
                                 key={customer.id}
+                                count={customer.count}
                                 index={index}
                             />
                         );

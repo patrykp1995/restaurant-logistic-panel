@@ -16,7 +16,7 @@ const MenuInTable = () => {
     } else if (isSuccess) {
         data = menu.map((el) => {
             return (
-                <option key={el.id} value={el.name}>
+                <option key={el.id} value={el.name} data-price={el.price}>
                     {el.name} {el.price}
                 </option>
             );

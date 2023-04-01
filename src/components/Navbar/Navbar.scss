@@ -21,11 +21,13 @@
     text-decoration: none;
     padding: 1rem 1.5rem;
 
+    &.active,
     &:hover {
       background: $secondary-color;
       color: $primary-color;
       transition: .4s;
       border-radius: .5rem;
     }
+
   }
 }

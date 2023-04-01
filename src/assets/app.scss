@@ -69,9 +69,14 @@
   text-transform: capitalize;
   border: 5px solid $secondary-color;
 
-  p {
+  p, span {
     color: $primary-color;
     font-weight: 600;
+  }
+
+  span {
+    font-weight: 300;
+    text-transform: lowercase;
   }
 }
 
@@ -86,6 +91,13 @@
   padding: 0.5rem 1rem;
   display: flex;
   flex-direction: column;
+
+  p {
+    color: #b63030;
+    padding: 5px;
+    margin-right: 5px;
+    margin-top: 5px;
+  }
 
   &__addClient {
     display: flex;

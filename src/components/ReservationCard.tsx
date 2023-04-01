@@ -7,9 +7,10 @@ import {v4 as uuid} from "uuid";
 interface ReservationCardType {
     name: string;
     index: number;
+    count: number;
 }
 
-function ReservationCard({name, index}: ReservationCardType) {
+function ReservationCard({name, index, count}: ReservationCardType) {
     const dispatch = useDispatch();
     return (
         <div
@@ -20,12 +21,14 @@ function ReservationCard({name, index}: ReservationCardType) {
                     addCustomer({
                         id: uuid(),
                         name,
+                        count,
                         food: [],
                     })
                 );
             }}
         >
             <p key={index}>{name}</p>
+            <span>Ilość osób: {count}</span>
         </div>
     );
 }
