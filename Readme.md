@@ -32,10 +32,16 @@ the restaurant.
     - drinks,dinner and subfilters like vege etc
     - add filters to data/db.json && add price  **_<strong>DONE</strong>_**
 
+# Think about
+
+- add calnedar with dates and then in summary of they filter all orders per date
+- if you add calendar to reservation, then tables also need to be updated and filtered by date
+
 # Information for me
 
 - add new disptach for addReservation with number of people ( change type for reservation to object and inside add name
   and number)
+
 
 
 

@@ -1,6 +1,7 @@
 import React from "react";
 import './MenuItems.scss'
 import {useGetMenuQuery} from "../../feature/api/apiSlice";
+import {Link} from "react-router-dom";
 
 const MenuItems = () => {
     const {
@@ -19,13 +20,18 @@ const MenuItems = () => {
             <div className="menuContainer">
                 {menu.map((contentItem) => {
                     return (
-                        <div className="menuContainer__element" key={contentItem.id}>
-                            <img src={contentItem.img} alt={contentItem.name} width="300" height={200}/>
-                            <div className="menuContainer__element--description">
-                                <p className="descriptionName">{contentItem.name}</p>
-                                <span>price:<p>{contentItem.price}$$</p></span>
+                        <Link
+                            to={`/menu/${contentItem.id}`}
+                            state={{contentItem}}
+                        >
+                            <div className="menuContainer__element" key={contentItem.id}>
+                                <img src={contentItem.img} alt={contentItem.name} width="300" height={200}/>
+                                <div className="menuContainer__element--description">
+                                    <p className="descriptionName">{contentItem.name}</p>
+                                    <span>price:<p>{contentItem.price}$$</p></span>
+                                </div>
                             </div>
-                        </div>
+                        </Link>
                     );
                 })}
             </div>
