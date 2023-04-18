@@ -1,0 +1,30 @@
+.App {
+  background: rgba(36, 55, 123, 0.4392156863);
+
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  max-width: 660px;
+  margin: 1rem auto;
+  background-color: white;
+  border-radius: 0.4rem;
+  box-shadow: 0.1rem 0.1rem 0.41rem #24377B;
+  width: 80%;
+  padding: 20px;
+  border: 5px solid #f4b806;
+
+  input, textarea {
+    margin: 1rem;
+    color: #24377B;
+    font-weight: 600;
+    border: 2px solid #24377B;
+    border-radius: 0.4rem;
+    padding: 15px;
+  }
+
+  button {
+    color: white;
+  }
+}

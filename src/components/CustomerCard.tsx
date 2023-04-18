@@ -12,16 +12,33 @@ interface CustomerCardType {
     count: number;
 }
 
+function sumPricesFromSpans() {
+    const spanElements = Array.from(document.getElementsByClassName("price"));
+
+    const prices = spanElements.map((span) => {
+        const priceString = span.innerHTML.trim().replace("$", "").replace(" ", "");
+        return parseFloat(priceString);
+    });
+
+    const sum = prices.reduce((acc, price) => acc + price, 0);
+
+    return sum;
+}
+
 function CustomerCard({id, name, food, index, count}: CustomerCardType) {
     const [customerFoodInput, setCustomerFoodInput] = useState("");
     const [foodPrice, setFoodPrice] = useState(0)
     const dispatch = useDispatch();
 
+    const totalPrice = sumPricesFromSpans();
     console.log('foodList', food)
     return (
         <div className="customer-food-card-container">
             <div className="customer-food-card-container__client-info">
-                <h5>{name}</h5>
+                <div className="customer-food-card-container__header">
+                    <h5>{name}</h5>
+                    Total Price: {totalPrice.toFixed(2)}$$
+                </div>
                 <p>Ilość osób: {count}</p>
                 <button
                     onClick={() => {
@@ -52,6 +69,7 @@ function CustomerCard({id, name, food, index, count}: CustomerCardType) {
                     </select>
                     <button
                         onClick={() => {
+                            sumPricesFromSpans();
                             dispatch(
                                 addFoodToCustomer({
                                     id,
@@ -70,11 +88,12 @@ function CustomerCard({id, name, food, index, count}: CustomerCardType) {
                     return (
                         <div className="customer-food--order">
                             <h5>{food.food}</h5>
-                            <span>{food.price} $$</span>
+                            <span className="price">{food.price} $$</span>
                         </div>
                     )
                 })}
             </div>
+
         </div>
     );
 }

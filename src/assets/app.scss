@@ -182,6 +182,17 @@
     border-radius: $default-radius;
     padding: 15px;
   }
+
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    h3 {
+      color: $primary-color;
+
+    }
+  }
 }
 
 .customer-food-input-container {
@@ -213,4 +224,18 @@
   width: 100%;
   margin-top: 1rem;
   justify-content: space-between;
+}
+
+.productViewDetails {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  p {
+    margin: 10px 0;
+  }
+
+  img {
+    width: 300px;
+  }
 }

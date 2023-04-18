@@ -6,6 +6,7 @@
       "price": 7.99,
       "id": 1,
       "description": "Pierś z kurczaka w chrupiącej złocistej panierce.",
+      "details": "Vegetarian option. Served with garlic bread and a side salad.",
       "img": "https://www.foodnavigator-asia.com/var/wrbm_gb_food_pharma/storage/images/publications/food-beverage-nutrition/nutraingredients-asia.com/news/research/finger-lickin-good-nutrition-moringa-flower-fortified-chicken-nuggets-past-fibre-taste-and-shelf-life-test/10099907-1-eng-GB/Finger-lickin-good-nutrition-Moringa-flower-fortified-chicken-nuggets-past-fibre-taste-and-shelf-life-test.jpg"
     },
     {
@@ -14,6 +15,7 @@
       "price": 13.99,
       "id": 2,
       "description": "Pizza neapolitańska, na cienkim cieście, wypiekana w piecu opiekanym drewnem.",
+      "details": "Vegetarian option. Served with garlic bread and a side salad.",
       "img": "https://cdn.shopify.com/s/files/1/0205/9582/articles/20220211142347-margherita-9920_ba86be55-674e-4f35-8094-2067ab41a671.jpg?crop=center&height=915&v=1644590192&width=1200"
     },
     {
@@ -22,6 +24,7 @@
       "price": 11.99,
       "id": 3,
       "description": "Hamburger z 200g mięsem wołowym z dodatkami w postaci karmelizowanej cebulki, ogórków korniszonych, sałaty, pomidorora i smażonego boczku.",
+      "details": "Vegetarian option. Served with garlic bread and a side salad.",
       "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQUKqnqHPVkHYWBZEQ4-NcLEtEtk3-FmxcYq2Vg6LhqRwh3rVE9SHA_bqU8Er7TI6_9T5E&usqp=CAU"
     },
     {
@@ -30,6 +33,7 @@
       "price": 1.99,
       "id": 4,
       "description": "250ml świeżo wyciskanego soku z pomarańczy",
+      "details": "Vegetarian option. Served with garlic bread and a side salad.",
       "img": "https://zasoby.ekologia.pl/artykulyNew/26278/xxl/shutterstock-519342568_800x600.jpg"
     },
     {
@@ -38,6 +42,7 @@
       "price": 1.49,
       "id": 5,
       "description": "250ml zimnej coca coli",
+      "details": "Vegetarian option. Served with garlic bread and a side salad.",
       "img": "https://www.pagenews.gr/wp-content/uploads/2022/09/EeVj4ZPWoAAaXaO-1024x630.jpg"
     },
     {
@@ -46,6 +51,7 @@
       "price": 5.49,
       "id": 6,
       "description": "80ml whisky Talisker z lodem i zimną Coca Colą",
+      "details": "Vegetarian option. Served with garlic bread and a side salad.",
       "img": "https://jakpicwhisky.pl/wp-content/uploads/2021/11/signature_mixers_woody-1.jpg"
     },
     {
@@ -54,6 +60,7 @@
       "price": 14.99,
       "id": 7,
       "description": "Włoski makaron z oliwą, czosnkiem, papryczką chilli, natką pietruszki, masłem i krewetkami.",
+      "details": "Vegetarian option. Served with garlic bread and a side salad.",
       "img": "https://c6.staticflickr.com/9/8346/28111939213_fc18b29d8f_o.jpg"
     }
   ]

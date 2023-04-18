@@ -7,12 +7,11 @@ function ProductView() {
     const singleItem = state.contentItem;
 
     return (
-        <div>
+        <div className="productViewDetails">
             <h1>{singleItem.name}</h1>
+            <img alt={singleItem.name} src={singleItem.img}/>
+            <p>{singleItem.description}</p>
             <button onClick={() => navigate(-1)}>go back</button>
-            {/*<h1>sadsa{contentItem.name}</h1>*/}
-            {/*<img alt={contentItem.name} src={contentItem.image}/>*/}
-            {/*<p>{contentItem.price}</p>*/}
         </div>
     )
 }
